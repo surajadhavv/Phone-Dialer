@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Phone Dialer</title>
+</head>
+
+<body class="main">
+    <div class="phone">
+
+        <div class="main1">
+            <input id="dis" type="text" name="input">
+        </div>
+
+        <div class="keys">
+            <div class="main1" class="line1">
+                <div class="div">1</div>
+                <div class="div">2</div>
+                <div class="div">3</div>
+            </div>
+            <div class="btm"></div>
+            <div class="btm">ABC</div>
+            <div class="btm">DEF</div>
+
+
+            <div class="main1" class="line2">
+                <div class="div">4</div>
+                <div class="div">5</div>
+                <div class="div">6</div>
+            </div>
+            <div class="btm">GHI</div>
+            <div class="btm">JKL</div>
+            <div class="btm">MNO</div>
+
+            <div class="main1" class="line3">
+                <div class="div">7</div>
+                <div class="div">8</div>
+                <div class="div">9</div>
+            </div>
+            <div class="btm">PQRS</div>
+            <div class="btm">TUV</div>
+            <div class="btm">WXYZ</div>
+
+            <div class="main1" class="line4">
+                <div class="div">*</div>
+                <div class="div">0</div>
+                <div class="div">#</div>
+            </div>
+
+            <div class="main1" id="line5">
+                <div class="div1" >&#9734</div>
+                <div class="divcall">&#128222</div>
+                <div class="div1" onclick="clear()">&#8592</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        var btn = document.querySelectorAll(".div");
+        var input = document.querySelector("input");
+
+        btn.forEach(val => {
+            val.addEventListener("click", () => {
+                input.value += val.innerText;
+            })
+        });
+
+
+        /* due to time limit i couldn't work on this function but have given some logic */
+
+        
+        function clear(){
+            var display = document.getElementById('dis').value;
+            var remove = display.slice(0, display.lenght - 1);
+           /* document.getElementById('dis').value = remove;*/
+        }
+
+    </script>
+</body>
+
+</html>
